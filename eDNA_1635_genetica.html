@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>eDNA Adventures</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ramón Gallego" />
+    <meta name="date" content="2022-03-08" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet/leaflet.js"></script>
+    <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="libs/proj4/proj4.min.js"></script>
+    <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding/leaflet.js"></script>
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/sfah.css" type="text/css" />
+    <link rel="stylesheet" href="css/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/nord.css" type="text/css" />
+    <link rel="stylesheet" href="css/nord-light.css" type="text/css" />
+    <link rel="stylesheet" href="css/nord-dark.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-nord.css" type="text/css" />
+    <link rel="stylesheet" href="css/typo.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+name:bio
+class: nord-dark, center
+background-size: cover
+
+
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 10%),rgba(46, 52, 64, 90%),rgba(46, 52, 64, 50%),rgba(46, 52, 64, 10%)), url(images/eDNA_concept.png)
+
+
+
+# .huge[*eDNA metabarcoding*]
+
+## *and other sequencing adventures*
+
+&lt;style type="text/css"&gt;
+.small { font-size: 70% }
+.huge  { font-size: 120% }
+
+.highlight-last-item &gt; ul &gt; li, 
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+
+.bold-last-item &gt; ul &gt; li:last-of-type,
+.bold-last-item &gt; ol &gt; li:last-of-type {
+  font-weight: bold;
+}
+&lt;/style&gt;
+
+
+
+.footnote[.huge[
+
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+**Ramón Gallego Simón**
+]]
+
+???
+
+Image credit: [ Copyright Kelly Lance 2014]
+
+---
+
+name:bio
+class: nord-dark
+layout: true
+
+
+##  .center[Bio]
+
+---
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Teide.jpg") 
+background-position: center
+background-size: cover
+
+.leftmost-column[
+.fancy[Ramón Gallego Simón]
+
+
+![](images/RGS_profile.jpg)&lt;!-- --&gt;
+
+From the Canary Islands, Spain
+]
+
+
+
+.center-column[
+<div id="htmlwidget-8e8a87fb0a69ccc5a267" style="width:504px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8e8a87fb0a69ccc5a267">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[28.3,-16.5],5.5,[]]},"evals":[],"jsHooks":[]}</script>
+]
+
+.rightmost-column[
+.middle[
+![](images/Canary_Islands.jpg)&lt;!-- --&gt;
+&lt;/br&gt;
+![](images/LaPalma.jpeg)&lt;!-- --&gt;
+
+]
+
+]
+
+---
+layout: false
+class: middle, nord-dark
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),  url("images/Madridmequema.jpg") 
+background-position: center
+background-size: cover
+
+
+## .center[.bold[Ramón Gallego Simón]]
+
+.leftmost-column[
+
+&lt;img src="images/Cabo_De_Gata.jpg" height="25%" /&gt;
+*BSc and MSc in Madrid, Spain*
+
+&lt;img src="images/UAM.white.png" width="2665" height="25%" /&gt;
+
+
+]
+
+--
+
+.center-column[
+.center[
+&lt;img src="images/Auckland.jpg" width="75%" /&gt;
+
+*PhD in Auckland, Aotearoa New Zealand*
+
+&lt;img src="images/uoa-logo-2015-reverse.png" width="641" height="25%" style="background-color: #9ecff7; padding:5px; display: inline-block;.Nord-dark-damp-img" /&gt;
+]
+]
+--
+.rightmost-column[
+
+![](images/PNW.jpg)&lt;!-- --&gt;
+*To a Postdoc in Seattle, WA*
+
+&lt;img src="images/UW_trans.png" width="995" style="background-color: #9ecff7; padding:5px; display: inline-block;" /&gt;&lt;img src="images/NOAA-fisheries-logo.jpg" style="background-color: #9ecff7; padding:5px; display: inline-block;" /&gt;
+
+]
+---
+class: inverse, center, middle
+
+# Uso de herramientas geneticas para identificación de especies
+
+---
+class:  middle
+# Principio básico
+
+
+
+
+.pull-left[
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+&lt;/br&gt;
+
+ * ### Secuencias de ADN de animales de la misma especie deben ser más parecidas entre ellas que a secuencias de otras especies
+]
+
+.pull-right[
+
+![](eDNA_1635_genetica_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+ 
+]
+
+
+---
+
+background-image: url(images/Similarity.png) 
+background-position: center
+background-size: contain
+
+## Principio básico
+
+---
+
+
+
+## Principio básico
+
+Con una base de datos completa, podemos identificar secuencias de ADN origen desconocido
+
+
+
+&lt;img src="images/identify.png" width="75%" /&gt;
+
+---
+
+
+
+## Principio básico
+
+Usando distintos métodos estadísticos, asignamos una identidad a las secuencias
+
+
+
+&lt;img src="images/As_tree.png" width="75%" /&gt;
+
+---
+class: inverse, center, middle
+# Identificar larvas de invertebrados antarticos
+
+---
+class: nord-dark
+layout: true
+name: Meroplankton
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 60%),rgba(46, 52, 64, 20%)),url("images/fondo.antartida.JPG")
+background-position: center
+background-size: cover
+
+---
+
+## What is the larval diversity in the Coastal Ross Sea?
+
+&lt;/br&gt;
+.pull-left[
+&lt;img src="images/LGP_map.png" alt="pipeline" width =480 /&gt;
+]
+
+.pull-right[
+
+.pull-left[&lt;img src="images/Antarctica-New-Zealand-Program-Logo.jpg" alt="pipeline" width =240 /&gt;]
+
+.pull-right[&lt;img src="images/uoa-logo-2015-reverse.png" alt="pipeline" width =240 /&gt;]
+
+&lt;/br&gt;
+
+.center[&lt;img src="images/sampling.jpg" alt="pipeline" width =400 /&gt;]
+
+]
+---
+class: middle
+
+.left-column[
+* ### Many types - how many species?
+&lt;/br&gt;
+&lt;img src="images/hole.jpg" alt="pipeline" /&gt;
+&lt;/br&gt;
+
+]
+
+
+.right-column[
+
+&lt;img src="images/Larvae.png" alt="pipeline" /&gt;
+]
+
+.footnote.oc-bg-black.opacity-10.nord-dark[
+**Gallego, R.**, Heimeier, D., Lavery, S., Sewell, M.A. 2015. The meroplankton communities from the
+coastal Ross Sea: a latitudinal study. Hydrobiologia, 761 (1): 195-209]
+
+???
+
+And I was interested in testing the idea of a decreasing planktonic diversity at higher latitudes, known as Thorson's rule
+
+But a crucial step is a reliable identification of the species found **transition**
+
+---
+class: nord-dark
+name: Next steps Bathylasma
+
+## .center[ Two life stages: how does environmental change affects them?]
+
+.left-column[
+
+  * Larvae 
+
+&lt;img src="images/Nauplius.jpg" alt="pipeline" width="150" /&gt;
+
+  * Adults
+
+&lt;img src="images/bathylasma-corolliforme-BG5FDT.jpg" alt="pipeline" width="150" /&gt;
+]
+
+.right-column[
+.center[&lt;img src="images/Profile.png" alt="pipeline" width="600" /&gt;]
+&lt;!-- ![](images/Profile.png) --&gt;
+]
+
+
+???
+
+One of the most crucial points in my research path came with the idea that a meroplankton community not 
+only tells us about the diversity similarity along a gradient, but also about the life history of the species present 
+
+---
+name: Bathylasma larvae and adult
+class: nord-dark
+### Habitat Suitability changes differently for 
+.pull-left[
+### Adults
+&lt;img src="images/change_ad.png" alt="pipeline" width="550" /&gt;
+]
+
+.pull-right[
+### Larvae
+&lt;img src="images/change_lv.png" alt="pipeline" width="550" /&gt;
+]
+
+.footnote.oc-bg-black.opacity-10.nord-dark[
+**Gallego, R.**, Basher, Z., Lavery, S., Dennis, T.E., Sewell, M.A. 2017. On the need to consider multiphasic sensitivity of marine organisms to climate change: a case study of the Antarctic acorn barnacle.
+Journal of Biogeography, 44: 2165-2175]
+
+???
+
+And we opened the door to applying distribution models to species detected using molecular tools,
+and forecasting shifts in their distributions with climate change. To which we'll come back later  
+---
+
+class: inverse, center, middle
+# ADN ambiental 
+
+---
+name: concept
+class: nord-dark, center
+background-size: cover
+
+layout: false
+background-image: url(images/eDNA_concept.png)
+
+---
+name: concept
+class: nord-dark, center
+background-size: cover
+
+layout: true
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 10%),rgba(46, 52, 64, 90%),rgba(46, 52, 64, 50%),rgba(46, 52, 64, 10%)),url(images/eDNA_concept.png)
+
+
+---
+class: middle
+
+# .bold[Todos los seres vivos dejan restos de ADN en el medio ambiente]
+
+--
+&lt;/br&gt;
+&lt;/br&gt;
+
+# .bold[El desafío está en rescatar y obtener la información]
+
+---
+class: middle
+
+* ## *La tecnologia actual permite secuenciar millones de fragmentos cortos (500 bp max)*
+&lt;/br&gt;
+* ## *El objetivo es obtener una mirada transversal al ecositema, obteniendo copias de fragmentos cortos con mucha información*
+
+
+
+---
+layout: false
+name: concept
+class: nord-light, center
+
+# *Diseño de primers *
+
+###.bold[Dos secciones del genoma compartida  ]
+
+
+&lt;img src="images/aligned.png" alt="pipeline" width="550" /&gt;
+
+
+---
+class: nord-light, center
+
+# *Diseño de primers *
+
+###.bold[Dos secciones del genoma compartida  ]
+
+
+&lt;img src="images/primerloc.png" alt="pipeline" width="550" /&gt;
+
+---
+class: nord-light, center
+
+# *Diseño de primers *
+
+###.bold[Dos secciones del genoma compartida  ]
+###.bold[Incluyendo una zona altamente diferenciada  ]
+
+&lt;img src="images/amplified.png" alt="pipeline" width="550" /&gt;
+
+---
+class: nord-light, center
+
+# *Diseño de primers *
+
+
+
+
+### Dos grandes grupos de zonas candidatas
+
+.pull-left[
+.bold[ribosomal RNA]
+ 
+ 1. Los puentes estan conservados
+ 2. Los loops mutan libremente
+ 3. Ejemplos 16SrRNA, 18SrRNA 
+ 
+&lt;img src="images/thermus_16s_2ndry.jpeg" alt="16S" width="300" /&gt;
+
+]
+.pull-right[
+.bold[Genes de proteinas transmembrana]
+
+   1. El AA tiene que ser hidrofobo
+   2. La tercera base puede cambiar
+   2. Mejor si son mitocondriales  (Hay muchas)
+   3. Ejemplos: COI, Cytb
+
+&lt;img src="images/COI.png" alt="16S"  /&gt;
+
+]
+
+
+---
+class: nord-light, center
+
+# Diseño de primers 
+
+# *Secuenciacion Masiva*
+
+&lt;/br&gt;
+
+.pull-left[
+1. .huge[*Sequencing by Synthesis*]
+
+]
+ 
+.pull-right[
+&lt;img src="images/SeqbySyn.png" alt="16S"  /&gt;
+
+] 
+
+## Millones de secuencias
+
+## Cientos de muestras
+
+---
+
+name: concept
+class: nord-dark, center
+background-size: cover
+
+layout: true
+background-image: linear-gradient(150deg,rgba(46, 52, 64, 10%),rgba(46, 52, 64, 90%),rgba(46, 52, 64, 50%),rgba(46, 52, 64, 10%)),url(images/eDNA_concept.png)
+
+---
+
+class: middle 
+
+## ADN de todos los organismos
+
+&lt;/br&gt;
+
+## Fragmento de ADN que los identifica
+
+&lt;/br&gt;
+
+## Mucha información de muchas muestras
+
+---
+
+name: concept
+class: nord-dark, center, middle
+background-size: cover
+
+# *Podemos investigar preguntas ecologicas *
+
+# *sin un compromiso de profundidad y precisión*
+
+
+
+---
+name:OA_cover
+layout: true
+class: nord-dark,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+### .center[Ocean Acidification and warming]
+
+---
+
+
+class: nord-dark
+name: How will forecasted conditions shape coastal communities
+
+
+.pull-left[
+&lt;/br&gt;
+.center[&lt;img src="images/sst.models.1.png" alt="sst" width="400" /&gt;]]
+
+.pull-right[
+&lt;/br&gt;
+&lt;img src="images/pH_Global_ave_E.png" alt="PCRbias" width="480" /&gt; 
+]
+
+---
+class: nord-dark
+## .center[.fancy[Afecta a muchas especies ]
+&lt;/br&gt;
+
+.pull-left[
+&lt;img src="images/oyster pg 2.jpg" alt="PCRbias" width="360" /&gt;
+]
+
+
+.pull-right[
+&lt;img src="images/Limacina.png" alt="PCRbias" width="360" /&gt;]
+]
+
+
+
+???
+With global warming and increased pCO2 levels, there is little doubt that future marine communities will have to face a warmer, more acidic ocean
+---
+class: nord-dark
+name: A lot of info on many spp
+
+ &lt;img src="images/paper_snip.OA.Oph.png" alt="PCRbias" height="100" /&gt;
+
+--
+
+&lt;img src="images/paper_snip.OA.Lima.png" alt="PCRbias"  /&gt;
+
+--
+
+&lt;img src="images/paper_snip.OA.many.png" alt="PCRbias" height="100" /&gt;
+
+--
+
+&lt;img src="images/paper_snip.OA.Meta.png" alt="PCRbias" height="120" /&gt;
+
+???
+
+Those effects are not happenning in a vacuum, but likely with Temp
+And in different directions
+---
+class: nord-dark
+Name: Ecosystem-wide: not so much
+
+&lt;img src="images/paper_snip.OA.Comm1.png" alt="PCRbias" height=120  /&gt;
+
+
+&lt;img src="images/paper_snip.OA.Comm2.png" alt="PCRbias" height="120" /&gt;
+
+.pull-left[
+&lt;img src="images/paper_snip.OA.Comm3.png" alt="PCRbias" width=250/&gt;
+]
+
+--
+
+.pull-right[
+.middle[
+.fancy[
+## *Expanding to other ecosystems*
+]]
+]
+---
+name: WHy Hood Canal
+class: middle, nord-dark
+###.center[.fancy[.title[Why the Puget Sound?]]]
+
+Naturally occuring High *p*CO&lt;sub&gt;2&lt;/sub&gt;  levels offer a view of not far-fetched conditions
+&lt;img src="images/paper_snip.OA.why.png" alt="PCRbias" /&gt;
+
+
+
+---
+class: nord-dark
+name: Research plan
+
+##.center[.fancy[.title[Diseño experimental]]]
+
+.pull-left[
+
+<div id="htmlwidget-bab8a9b08a79d9c595a1" style="width:90%;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bab8a9b08a79d9c595a1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[48.449827,48.545085,48.5145,47.462959,47.35981,47.856772,47.608961,47.378431],[-122.963231,-123.012028,-123.151,-123.103774,-123.155597,-122.607721,-122.984734,-122.97483],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["CP","FH","LK","LL","PO","SA","TR","TW"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[1,1],"textsize":"20px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[47.5,-122.5],7,[]],"limits":{"lat":[47.35981,48.545085],"lng":[-123.155597,-122.607721]}},"evals":[],"jsHooks":[]}</script>
+]
+
+--
+
+.pull-right[
+
+.center[
+&lt;img src="images/ridges.env.vars.png" alt="PCRbias" /&gt;
+]
+
+]
+
+---
+name: Smpling design
+class: nord-dark
+##.center[.fancy[Diseño experimental]]
+
+.left-column[
+
+&lt;/br&gt;
+
+* .huge.bold[Muestreo mensual]
+      * eDNA y variables ambientales
+
+*  .huge.bold[Replicas biologicas]
+
+* .huge.bold[Replicas tecnicas]
+]
+.right-column.center[&lt;img src="images/Biol.rep.png" alt="PCRbias" width="540" /&gt;
+&lt;/br&gt;
+ &lt;img src="images/procB2.png" alt="PCRbias" width="540" /&gt;]
+
+???
+
+This sampling was carried out in a single day, which when working in a coastal sampling, brings in a major 
+
+---
+name: Shiny app
+class: nord-dark
+
+### .center[.nord12[Pregunta 1]: ¿Podemos detectar las fluctuaciones en presencia y abundancia de las especies de interés? ]
+
+&lt;/br&gt;
+
+
+&lt;video width="320" height="240" controls&gt;
+&lt;source src="images/Shiny.mov" type="video/mp4"&gt;
+&lt;/video&gt;
+
+
+---
+class: nord-dark
+name: using both PA and eDNAindex
+layout: true
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+---
+
+### .center[.nord12[Pregunta 2]: Hay distintas comunidades asociadas con &lt;br&gt; Temperature and pH]
+
+---
+### .nord12[Pregunta 2]: Community changes
+.center[
+&lt;img src="images/Figure2.2020-05-05_1.png" alt="PCRbias" width="560" &gt;
+]
+---
+### .nord12[Pregunta 2]: Community changes
+.center[
+&lt;img src="images/Figure2.2020-05-05_2.png" alt="PCRbias" width="600" &gt;
+]
+---
+### .nord12[Pregunta 2]: Community changes
+.center[
+&lt;img src="images/Figure2.2020-05-05_3.png" alt="PCRbias" width="600" &gt;
+]
+---
+layout: true
+template: Dowehavewhatweneed
+name: Q3
+class: nord-dark
+
+---
+### .nord12[Pregunta 3]: ¿Qué pinta tiene el futuro Puget Sound para las especies de interés?
+
+&lt;/br&gt;
+##.fancy[Modelos de presencia de cada taxon:]
+&lt;/br&gt;
+* .huge.bold[Usamos una regresión logística (presencia/ausencia)]
+&lt;/br&gt;
+
+* .huge.bold[Ajustado independiente en cada .nord13[área y estación]]
+&lt;/br&gt;
+* .huge.bold[y con temperatura y pH como variables explicativas]
+&lt;/br&gt;
+---
+
+name: Projections to 2095
+### .nord12.bold[Q3] - Estimando las condiciones en el Puget Sound (RCP8.5)
+
+
+.left-column[
+
+*  .huge.bold[Usando la estimación de Khangaonkar et al, 2019]
+
+*  .huge.bold[La predicción muestra algunos valores .nord13[ extremos] ]
+
+* .huge.bold[La mayoría de los valores .nord13[se ven en el escenario actual]]
+
+]
+
+.right-column[
+&lt;img src="images/Future_scenario.png" alt="PCRbias"&gt;]
+
+???
+
+Taking advantage from recently published models for the inner sea
+---
+
+
+
+
+
+
+## Cada especie responde de un modo distinto
+
+&lt;img src="images/Most.varied.taxa.png" alt="PCRbias" &gt;
+
+
+---
+
+
+## Cambios de diversidad en varios grupos
+
+&lt;img src="images/Dinophyceaerastertitle.png" alt="PCRbias" width="850"&gt;
+
+---
+
+layout: false
+class: middle, nord-dark
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+
+## .center.bold[Muchas Gracias]
+&lt;/br&gt;
+.content-box-gray[.nord1[
+- ### **Mentores** y supervisores: Krista Nichols, Ana Laca, Linda Park, Ole Shelton, Ryan Kelly, Mary Sewell, Rochelle Constantine, Eduardo López
+
+- ###  **Compañeros de laboratorio, estudiantes y amigos**
+- ###  **Financiación**: NOAA, UW, Packard Foundation, University of Auckland, MPI, Ana Laca
+
+]]
+
+
+
+---
+
+layout:false
+class: nord-light,  middle, typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+### .huge[.nord5[.center[ .bold[Building mitochondrial references ]]]]
+### .nord5[.center[ .bold[for species identification ]]]
+
+---
+
+layout: true
+class: nord-light,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+
+---
+### .huge[.nord5[.center[ .bold[Building mitochondrial reference databases ]]]]
+.huge[.nord5[.center[.huge[*A team effort*]]]]
+
+.pull-left[
+.content-box-yellow[
+
+- Led by *Ana Ramón-Laca*
+
+- Made possible by support from PIs *Krista Nichols* at NOAA and *Ryan Kelly* at UW
+
+- No point on having a guest room
+
+]
+
+
+]
+
+.pull-right[
+
+&lt;img src="images/home_lab.jpeg" alt="homelab" width="400" &gt;
+]
+
+
+---
+name: reasons
+
+
+### .huge[.nord5[.center[ .bold[*Motivation*]]]]
+
+.pull-left[
+
+&lt;/br&gt;
+&lt;/br&gt;
+
+.content-box-yellow[
+
+
+- Obtaining full mitogenomes affordabl-ish
+
+- PCR-free method
+
+- Without requiring to pool 100s of specimens
+
+- Obtaining whole-length fragments
+
+]
+]
+
+---
+name: Approaches
+
+
+### .huge[.nord5[.center[ .bold[*Mitochondrial enrichment*]]]]
+
+.pull-left[
+.content-box-blue[
+
+
+- Mitochondrial enrichment at different levels:
+   - Tissue with higher mitochondrial content
+]
+
+
+]
+
+.pull-right[
+
+.content-box-blue[
+
+&lt;img src="images/LIVER.png" alt="homelab" width="400" &gt;
+
+]
+]
+
+---
+
+.huge[.nord5[.center[.huge[*Mitochondrial enrichment*]]]]
+
+.pull-left[
+.content-box-blue[
+
+
+- Mitochondrial enrichment at different levels:
+   - Tissue with higher mitochondrial content
+   - DNA Isolation techniques
+   
+]
+
+
+]
+
+.pull-right[
+
+.content-box-blue[
+
+&lt;img src="images/mito_isolation.png" alt="homelab" width="400" &gt;
+
+]
+]
+
+---
+
+.huge[.nord5[.center[.huge[*Mitochondrial enrichment*]]]]
+
+.pull-left[
+.content-box-blue[
+
+
+- Mitochondrial enrichment at different levels:
+   - Tissue with higher mitochondrial content
+   - DNA Isolation techniques
+   - Enrichment:
+      - Exonuclease targetting linear DNA
+      - De-phosphorilation and cutting with CRISPR-CAS9
+   
+]
+
+
+]
+
+.pull-right[
+
+.content-box-blue[
+
+&lt;img src="images/Cas9mitenrich protocol.png" alt="homelab" width="400" &gt;
+
+]
+]
+
+---
+.huge[.nord5[.center[.huge[*Mitochondrial enrichment*]]]]
+
+.pull-left[
+.content-box-blue[
+
+
+- Mitochondrial enrichment at different levels:
+   - Tissue with higher mitochondrial content
+   - DNA Isolation techniques
+- Enrichment:
+      - Exonuclease targetting linear DNA
+      - De-phosphorilation and cutting with CRISPR-CAS9
+- Sequencing enrichment:
+  - Adaptive sampling with reference mitogenomes
+   
+]
+
+
+]
+
+
+.pull-right[
+
+.content-box-blue[
+
+&lt;img src="images/adaptive_sampling.jpeg" alt="homelab" width="400" &gt;
+
+]
+]
+---
+layout: true
+class: nord-light,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+## .nord5[.center[*General Workflow*]]
+
+---
+
+
+.left-column[
+&lt;/br&gt;
+.content-box-blue[
+
+  - Library prep with Ligation or Rapid Kit
+ 
+  - Run on a FlowCell 9.4
+ 
+  - Run for ~ 8 hrs
+  - Basecalling using SUP
+  - Map to reference with minimap2
+
+]]
+
+.right-column[
+&lt;img src="images/COLAB.png" alt="homelab" &gt;
+]
+
+
+
+---
+layout: true
+class: nord-light,  typo-selection
+background-image: linear-gradient(150deg, rgba(0, 0, 0, 100%), rgba(0, 0, 0, 50%), rgba(0, 0, 0, 20%)),url(images/OA_fondo.jpg)
+background-size: cover
+
+---
+
+name: results1
+
+## .nord5[.center[*Great Coverage all across mitogenome*]]
+
+
+
+
+
+.content-box-yellow[
+
+- With *CRISPR-CAS9*, coverage varies around cutting regions
+]
+
+
+
+&lt;img src="images/NCATS.png" alt="homelab" &gt;
+
+
+
+
+--
+.content-box-yellow[
+
+- With *Exonuclease*, Coverage is really uniform
+]
+
+&lt;img src="images/Depletion.png" alt="uniform" &gt;
+
+
+---
+
+.content-box-yellow[
+- .huge[.nord1[*All methods heavily dependent on extraction Quality and fragment length*]]]
+
+
+.content-box-purple[
+&lt;/br&gt;
+.pull-left[
+.content-box-yellow[
+
+- With *CRISPR-CAS9*, coverage varies around cutting regions
+
+
+
+|     | CAS9      | gDNA depletion|
+              |-----|:---------:|:-------------:|
+              |  Min| 1,117X    |       647X	  |
+              |  Max| 14,299X   |        	875X  |
+              |  Ave| 8,971X    |  805X         |
+              |  Mean seq-length| 4000bp|5700bp |
+              |  Total Reads| 78k | 623k        |
+              |  On Target| 36k   | 2309        |
+
+
+
+]
+]
+
+
+.pull-right[
+.content-box-blue[
+
+&lt;img src="images/NCATS.png" alt="cas9"  &gt;
+
+&lt;img src="images/Depletion.png" alt="uniform" &gt;
+]]
+]]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
