@@ -505,7 +505,7 @@ class: nord-light
  
 .right-column[
 ```{r, out.width='75%' }
-knitr::include_graphics("images/SeqbySyn2.png")
+knitr::include_graphics("images/Seqbysyn2.png")
 ```
 ] 
 
