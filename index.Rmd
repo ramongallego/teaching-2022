@@ -490,7 +490,7 @@ class: nord-light, center
 
 
 ---
-class: nord-light, center
+class: nord-light
 
 # Diseño de primers 
 
@@ -498,22 +498,44 @@ class: nord-light, center
 
 </br>
 
-.pull-left[
+.left-column[
 1. .huge[*Sequencing by Synthesis*]
 
 ]
  
-.pull-right[
+.right-column[
 ```{r, out.width='75%' }
-knitr::include_graphics("images/SeqbySyn.png")
+knitr::include_graphics("images/SeqbySyn2.png")
 ```
 ] 
 
---
+---
 
-## Millones de secuencias
+class: nord-light
 
-## Cientos de muestras
+# Diseño de primers 
+
+# *Secuenciacion Masiva*
+
+</br>
+
+.left-column[
+  1. .huge[Sequencing by Synthesis]
+
+
+  1. .huge[*Millones de secuencias*]
+
+1. .huge[*Cientos de muestras*]
+
+]
+ 
+.right-column[
+```{r, out.width='75%' }
+knitr::include_graphics("images/SeqbySyn2.png")
+```
+] 
+
+
 
 ---
 
