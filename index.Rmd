@@ -504,7 +504,7 @@ class: nord-light, center
 ]
  
 .pull-right[
-```{r}
+```{r, out.width='75%' }
 knitr::include_graphics("images/SeqbySyn.png")
 ```
 ] 
