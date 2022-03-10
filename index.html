@@ -4,7 +4,7 @@
     <title>eDNA Adventures</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ramón Gallego" />
-    <meta name="date" content="2022-03-09" />
+    <meta name="date" content="2022-03-10" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
@@ -16,6 +16,8 @@
     <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
     <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
     <script src="libs/leaflet-binding/leaflet.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
     <link rel="stylesheet" href="css/sfah.css" type="text/css" />
     <link rel="stylesheet" href="css/fonts.css" type="text/css" />
@@ -102,8 +104,8 @@ From the Canary Islands, Spain
 
 
 .center-column[
-<div id="htmlwidget-0d71caf1d3ed75218c27" style="width:504px;height:504px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0d71caf1d3ed75218c27">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[28.3,-16.5],5.5,[]]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-261fc571880ccac4e290" style="width:504px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-261fc571880ccac4e290">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[28.3,-16.5],5.5,[]]},"evals":[],"jsHooks":[]}</script>
 ]
 
 .rightmost-column[
@@ -523,10 +525,13 @@ class: middle
 
 class: middle
 
-&lt;img src="images/eDNA_16x9.jpg" alt="muestreo" width="400" /&gt;
+&lt;img src="images/eDNA_16x9.jpg" alt="muestreo"  /&gt;
 
+---
 
-&lt;img src="images/IMG_20170627_163612829.jpg" alt="muestreo" width="400" /&gt;
+class: middle
+
+&lt;img src="images/IMG_20170627_163612829.jpg" alt="muestreo"  /&gt;
 
 
 ---
@@ -536,9 +541,14 @@ background-size: cover
 
 # *Podemos investigar preguntas ecologicas *
 
-# *sin un compromiso de profundidad y precisión*
+# *sin tener que elegir entre profundidad y precisión*
 
+---
+layout: false
+class: inverse, center, middle
 
+# Estudiando el efecto de la Acidificacion
+# y calentamiento del Oceano en comunidades costeras
 
 ---
 name:OA_cover
@@ -643,8 +653,8 @@ name: Research plan
 
 .pull-left[
 
-<div id="htmlwidget-3dd753927437f5ae4ffd" style="width:90%;height:504px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3dd753927437f5ae4ffd">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[48.449827,48.545085,48.5145,47.462959,47.35981,47.856772,47.608961,47.378431],[-122.963231,-123.012028,-123.151,-123.103774,-123.155597,-122.607721,-122.984734,-122.97483],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["CP","FH","LK","LL","PO","SA","TR","TW"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[1,1],"textsize":"20px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[47.5,-122.5],7,[]],"limits":{"lat":[47.35981,48.545085],"lng":[-123.155597,-122.607721]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-27ee3677090bd012b028" style="width:90%;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-27ee3677090bd012b028">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[48.449827,48.545085,48.5145,47.462959,47.35981,47.856772,47.608961,47.378431],[-122.963231,-123.012028,-123.151,-123.103774,-123.155597,-122.607721,-122.984734,-122.97483],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["CP","FH","LK","LL","PO","SA","TR","TW"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[1,1],"textsize":"20px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[47.5,-122.5],7,[]],"limits":{"lat":[47.35981,48.545085],"lng":[-123.155597,-122.607721]}},"evals":[],"jsHooks":[]}</script>
 ]
 
 --
@@ -681,6 +691,230 @@ class: nord-dark
 
 This sampling was carried out in a single day, which when working in a coastal sampling, brings in a major 
 
+
+---
+
+layout: false
+
+## Now we have an abundance table
+&lt;/br&gt;
+
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Taxa &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample1 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample2 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample3 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample4 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample5 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample6 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Phaeocystis antarctica &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 1929 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 138 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 11386 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2590 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Rhizosolenia setigera &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Micromonas pusilla &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 233 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 216 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Bathycoccus prasinos &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 1362 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 203 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 433 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Cylindrotheca closterium &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Balanus sp. &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Thalassiosira nordenskioeldii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Ditylum brightwellii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Minutocellus polymorphus &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Chaetoceros socialis &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+## What does this tell us about the world?
+&lt;/br&gt;
+
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Taxa &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample1 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample2 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample3 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample4 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample5 &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sample6 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;background-color: yellow !important;"&gt; Phaeocystis antarctica &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;background-color: yellow !important;"&gt; 1929 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 138 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 11386 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;background-color: yellow !important;"&gt; 2590 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Rhizosolenia setigera &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 35 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Micromonas pusilla &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 264 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 233 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 216 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Bathycoccus prasinos &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 1362 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 203 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 433 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Cylindrotheca closterium &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Balanus sp. &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Thalassiosira nordenskioeldii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Ditylum brightwellii &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Minutocellus polymorphus &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Chaetoceros socialis &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
 ---
 name: Shiny app
 class: nord-dark
@@ -690,7 +924,7 @@ class: nord-dark
 &lt;/br&gt;
 
 
-&lt;video width="320" height="240" controls&gt;
+&lt;video width="640" height="480" controls&gt;
 &lt;source src="images/Shiny.mov" type="video/mp4"&gt;
 &lt;/video&gt;
 
@@ -706,6 +940,170 @@ background-size: cover
 ### .center[.nord12[Pregunta 2]: ¿Hay distintas comunidades asociadas con &lt;br&gt; Temperatura y pH?]
 
 ---
+class: nord-light
+### .nord12[Pregunta 2]: Community changes
+
+.center.huge[Similitud entre muestras en base a su composicion]
+
+---
+class: nord-light
+layout: false
+### .nord12[Pregunta 2]: Community changes
+
+.center.huge[Similitud entre muestras en base a su composicion]
+
+&lt;table class=" lightable-paper table table-striped" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample1 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample3 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample4 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample5 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample6 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample7 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample8 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample9 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sample10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample2 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.989 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample3 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.884 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample4 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.69 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.969 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.977 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample5 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample6 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.211 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.812 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.918 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.6 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample7 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.912 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.602 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.67 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.951 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.748 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample8 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.858 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.177 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.936 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.739 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.668 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample9 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.44 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.716 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.943 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.511 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.239 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.817 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.733 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-style: italic;"&gt; Sample10 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; width: 1in; background-color: yellow !important;"&gt; 0.966 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.937 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 0.967 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 1in; "&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.927 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.951 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.882 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.948 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
 ### .nord12[Pregunta 2]: Community changes
 .center[
 &lt;img src="images/Figure2.2020-05-05_1.png" alt="PCRbias" width="560" &gt;

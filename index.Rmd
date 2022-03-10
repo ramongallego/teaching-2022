@@ -568,10 +568,13 @@ class: middle
 
 class: middle
 
-<img src="images/eDNA_16x9.jpg" alt="muestreo" width="400" />
+<img src="images/eDNA_16x9.jpg" alt="muestreo"  />
 
+---
 
-<img src="images/IMG_20170627_163612829.jpg" alt="muestreo" width="400" />
+class: middle
+
+<img src="images/IMG_20170627_163612829.jpg" alt="muestreo"  />
 
 
 ---
@@ -581,9 +584,14 @@ background-size: cover
 
 # *Podemos investigar preguntas ecologicas *
 
-# *sin un compromiso de profundidad y precisión*
+# *sin tener que elegir entre profundidad y precisión*
 
+---
+layout: false
+class: inverse, center, middle
 
+# Estudiando el efecto de la Acidificacion
+# y calentamiento del Oceano en comunidades costeras
 
 ---
 name:OA_cover
@@ -737,6 +745,55 @@ class: nord-dark
 
 This sampling was carried out in a single day, which when working in a coastal sampling, brings in a major 
 
+
+---
+
+layout: false
+
+## Now we have an abundance table
+</br>
+
+```{r dataTABLE, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+convert.names<- function(x){paste0("Sample", 1:length(x))}
+read_csv(here("data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("data", "Annotated.hashes.csv"))) %>% 
+  unite(family, genus, species, sep = "|", col = "taxa") %>% 
+  filter(taxa !="NA|NA|NA") %>% 
+ 
+  group_by(taxa) %>% tally %>% arrange(desc(n)) %>% slice(1:10) %>% 
+  pull(taxa) -> keepers 
+  read_csv(here("data", "ASV_table_all_together.csv")) %>%  
+  left_join(read_csv(here("data", "Annotated.hashes.csv"))) %>% 
+   unite(family, genus, species, sep = "|", col = "taxa", remove = F) %>%
+    mutate(label = case_when(is.na(species) ~  paste0(genus, " sp."),
+                                                   TRUE            ~ species)) %>% 
+  
+    filter(Miseq_run ==1,  taxa %in% keepers) %>% 
+    mutate(sample = fct_relabel(sample, convert.names)) %>% 
+    arrange(sample) %>% 
+    pivot_wider(id_cols = label, names_from = sample, values_from = nReads, values_fill = list (nReads = 0), values_fn = list(nReads= sum)) %>% 
+    rename (Taxa = label) -> data
+  data %>% 
+    select(1:7) %>% 
+    kable() %>% 
+    kable_styling(full_width = T) %>% 
+       column_spec(1, italic  = T) %>% 
+       column_spec(2:6, width = '1in') -> nice.table
+   
+
+nice.table
+```
+
+---
+## What does this tell us about the world?
+</br>
+
+```{r, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+nice.table %>% 
+  column_spec(2, width = '1in', background = "yellow") %>% 
+  row_spec(1,background = "yellow") 
+```
+
 ---
 name: Shiny app
 class: nord-dark
@@ -746,7 +803,7 @@ class: nord-dark
 </br>
 
 
-<video width="320" height="240" controls>
+<video width="640" height="480" controls>
 <source src="images/Shiny.mov" type="video/mp4">
 </video>
 
@@ -762,6 +819,36 @@ background-size: cover
 ### .center[.nord12[Pregunta 2]: ¿Hay distintas comunidades asociadas con <br> Temperatura y pH?]
 
 ---
+class: nord-light
+### .nord12[Pregunta 2]: Community changes
+
+.center.huge[Similitud entre muestras en base a su composicion]
+
+---
+class: nord-light
+layout: false
+### .nord12[Pregunta 2]: Community changes
+
+.center.huge[Similitud entre muestras en base a su composicion]
+
+```{r, echo = F, warning=FALSE ,message=FALSE, out.height='70%', out.width='70%'}
+t(data[,2:11]) %>%
+  vegan::vegdist(upper = F, diag = T) %>%
+  round(digits = 3) %>%
+  as.matrix()-> dist.table
+dist.table[upper.tri(dist.table)] <- ""
+dist.table %>% 
+  as.data.frame() %>% 
+  kable() %>% 
+    kable_paper(full_width = T) %>% 
+  kable_styling(bootstrap_options = "striped") %>% 
+       column_spec(1, italic  = T) %>% 
+       column_spec(2:6, width = '1in') %>% 
+  column_spec(2, width = '1in', background = "yellow") 
+```
+
+---
+
 ### .nord12[Pregunta 2]: Community changes
 .center[
 <img src="images/Figure2.2020-05-05_1.png" alt="PCRbias" width="560" >
